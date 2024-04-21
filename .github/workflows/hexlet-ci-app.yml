@@ -13,6 +13,7 @@ jobs:
         with:
           node-vers: 16
           cache: 'npm'
-      - run: make setup
-      - run: make test
-      - run: make lint
+      - run: npm install
+      - run: npm run lint
+      - name: run tests
+        run: npm test
